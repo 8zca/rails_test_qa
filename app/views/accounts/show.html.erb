@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+
+<% if @account.image.attached? %>
+  <%= @comment.account.image %>
+<% end %>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

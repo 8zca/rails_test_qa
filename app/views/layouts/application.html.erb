@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= search_form_for @search do |f| %>
+      <%= f.label :name_cont, "ユーザー名"%>
+      <%= f.search_field :name_cont %>
+      <div class="actions"><%= f.submit "検索" %></div>
+    <% end %>
+  </body>
+</html>

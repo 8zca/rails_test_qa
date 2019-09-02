@@ -1,0 +1,12 @@
+<%= form_with(model: @account, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+  <%= form.label :image %>
+  <%= form.file_field :image %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
