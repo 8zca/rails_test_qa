@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :accounts
   resources :posts
-  get 'user', to: 'users#index'
+  resources :users
   get 'sessions/new'
 
   #get 'users/new'
@@ -24,5 +24,7 @@ Rails.application.routes.draw do
   post '/login',to: 'sessions#create'
   delete '/logout',to: 'sessions#destroy'
 
+  get 'ajax/index'
+  get 'ajax/data'
   resources :users
 end

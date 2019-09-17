@@ -64,3 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rakuten_web_service'
 gem 'ransack'
 gem 'bootstrap'
+gem 'redis'
+gem 'redis-rails'
+

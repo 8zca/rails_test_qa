@@ -15,3 +15,12 @@
 //= require turbolinks
 //= require_tree .
 
+$(function() {
+var animation = bodymovin.loadAnimation({
+  container: document.getElementById('logo-lottie'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: '/line.json'
+  })
+})
