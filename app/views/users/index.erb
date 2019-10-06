@@ -1,9 +1,42 @@
-<h1>Ajax#index</h1>
-<p>※AjaxによるYahoo!ニュースのヘッドライン取得サンプル。</p>
-<hr>
-<div id="result">no information...</div>
-<div id="logo-lottie"></div>
+<nav class="navbar navbar-fixed-top navbar-transparent navbar-dark">
+  <div class="container">
+    <%= link_to root_path do %>
+      <span class="navbar-brand">wakamon</span>
+    <% end %>
 
-<script>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu1">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-</script>
+    <div class="collapse navbar-collapse" id="navmenu1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <%= link_to '#' do %>
+            <span class="nav-link">投稿一覧</span>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to '#' do %>
+            <span class="nav-link">新規投稿</span>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to '#' do %>
+            <span class="nav-link">お気に入り</span>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to '#' do %>
+            <span class="nav-link">【ユーザー名】</span>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to logout_path, method: :delete do %>
+            <span class="nav-link">ログアウト</span>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
