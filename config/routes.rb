@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   resources :accounts
   resources :posts
   resources :users
@@ -27,4 +28,9 @@ Rails.application.routes.draw do
   get 'ajax/index'
   get 'ajax/data'
   resources :users
+
+  resources :plans
+
+  post "plans/:id/charge", to: "charges#create", as: "charge"
+  get 'charges/complete'
 end

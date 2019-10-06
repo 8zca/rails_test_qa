@@ -67,3 +67,5 @@ gem 'bootstrap'
 gem 'redis'
 gem 'redis-rails'
 
+gem 'activeadmin'
+gem 'stripe'

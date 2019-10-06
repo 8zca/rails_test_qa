@@ -1,0 +1,14 @@
+<%= form_tag charge_path(@plan), class: "payment-go" do %>
+  <script src="https://checkout.stripe.com/checkout.js" style="background: #EBEBEB;" class="stripe-button"
+      data-key="pk_test_S2l1uS2EtNcXJybhVqNKYh44"
+      data-amount="<%= @plan.price %>"
+      data-currency="jpy"
+      data-description="クレジット決済"
+      data-name=<%= "#{@plan.title}を購入" %>
+      data-email=<%= "test@example.com" %>
+      data-label="購入する"
+      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+      data-locale="auto"
+      data-allow-remember-me="false">
+  </script>
+<% end %>
