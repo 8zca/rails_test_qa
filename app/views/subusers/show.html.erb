@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @subuser.name %>
+</p>
+
+<p>
+  <strong>Avatar path:</strong>
+  <%= image_tag @subuser.avatar_path.url %>
+</p>
+
+<%= link_to 'Edit', edit_subuser_path(@subuser) %> |
+<%= link_to 'Back', subusers_path %>
