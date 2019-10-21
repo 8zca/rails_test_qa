@@ -1,0 +1,27 @@
+<%= form_with(model: subuser, local: true) do |form| %>
+  <% if subuser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subuser.errors.count, "error") %> prohibited this subuser from being saved:</h2>
+
+      <ul>
+      <% subuser.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avatar_path %>
+    <%= form.file_field :avatar_path %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

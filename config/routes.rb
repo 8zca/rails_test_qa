@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subusers
   ActiveAdmin.routes(self)
   resources :accounts
   resources :posts

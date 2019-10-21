@@ -7,19 +7,8 @@ class ChargesController < ApplicationController
     @plan = Plan.find(params[:id])
     Stripe.api_key = ENV['STRIPE_KEY']
 
-    customer = Stripe::Customer.create({
-      email: params[:stripeEmail],
-      source: params[:stripeToken],
-    })
-    charge = Stripe::Charge.create({
-      customer: customer.id,
-      amount: @plan.price,
-      description: "商品ID:#{@plan.id} 商品名:#{@plan.title}",
-      currency: "jpy",
 
-    })
-
-    redirect_to action: :complete and return
+    redirect_to charges_complete_path and return
 
   rescue Stripe::CardError => e
     flash[:error] = e.message

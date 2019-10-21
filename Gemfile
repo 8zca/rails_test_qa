@@ -69,3 +69,4 @@ gem 'redis-rails'
 
 gem 'activeadmin'
 gem 'stripe'
+gem 'carrierwave'
